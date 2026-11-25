@@ -61,12 +61,12 @@ public class FlowSight implements ClientModInitializer {
 			Gizmos.cuboid(
 					new AABB(pos.getX() + 0.02, pos.getY() + 0.02, pos.getZ() + 0.02,
 							pos.getX() + 0.98, pos.getY() + Math.max(0.1, height), pos.getZ() + 0.98),
-					GizmoStyle.strokeAndFill(0xC0000000 | rgb, 1.5f, 0x50000000 | rgb));
+					GizmoStyle.strokeAndFill(0x60000000 | rgb, 1f, 0x1C000000 | rgb));
 
 			Vec3 flow = fluid.getFlow(level, pos);
 			Vec3 from = new Vec3(pos.getX() + 0.5, pos.getY() + Math.max(0.15, height - 0.1), pos.getZ() + 0.5);
-			if (falling) Gizmos.arrow(from, from.add(0, -0.6, 0), 0xFFFFFFFF, 2f);
-			else if (flow.lengthSqr() > 1e-4) Gizmos.arrow(from, from.add(flow.normalize().scale(0.4)), 0xFFFFFFFF, 2f);
+			if (falling) Gizmos.arrow(from, from.add(0, -0.6, 0), 0x90FFFFFF, 1.5f);
+			else if (flow.lengthSqr() > 1e-4) Gizmos.arrow(from, from.add(flow.normalize().scale(0.4)), 0x90FFFFFF, 1.5f);
 		}
 	}
 
