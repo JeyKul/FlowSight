@@ -1,0 +1,18 @@
+{
+	"schemaVersion": 1,
+	"id": "flowsight",
+	"version": "${version}",
+	"name": "FlowSight",
+	"description": "Press O to see flowing water, its strength and direction, even underwater.",
+	"authors": ["JeyKul"],
+	"contact": { "sources": "https://github.com/JeyKul/FlowSight" },
+	"license": "MIT",
+	"environment": "client",
+	"entrypoints": { "client": ["dev.jey.flowsight.FlowSight"] },
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
